@@ -59,6 +59,7 @@ us_states = {
     'Wisconsin': 'WI',
     'Wyoming': 'WY'
     }
+    
 
 def reader(path = "D:\\GT Data Science and Analytics\\Home_work\\03-Python\\ExtraContent\\Instructions\\PyBoss", file = "employee_data.csv"):
 
@@ -84,6 +85,7 @@ def reader(path = "D:\\GT Data Science and Analytics\\Home_work\\03-Python\\Extr
 
 	return id_lst, full_name_lst, dob_lst, ssn_lst, state_lst
 
+
 def writer(_id, _name, _surname, _dob, _ssn, _state):
 	
 	with open('results.csv', 'w') as new_csv_file:
@@ -94,12 +96,6 @@ def writer(_id, _name, _surname, _dob, _ssn, _state):
 			csv_writer.writerow({'Emp ID': _id[i], 'First Name': _name[i], 'Last Name': _surname[i], 'DOB': _dob[i], 'SSN': _ssn[i], 'State': _state[i]})
 
 
-
-
-
-#new_date = '2/24/1991'
-#new_date_convert = datetime.strptime(new_date, "%m/%d/%Y")
-#print(new_date_convert)
 
 def converter(full_names, dobs, ssns, states):
 	name, surname, new_dobs, ssn_5, states_2 = [], [], [], [], []
@@ -119,6 +115,7 @@ def converter(full_names, dobs, ssns, states):
 
 
 	return name, surname, new_dobs, ssn_5, states_2
+
 
 def logic():
 
